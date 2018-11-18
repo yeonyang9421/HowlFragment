@@ -28,17 +28,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         switch (v.getId()){
             case R.id.menu1:
-                getSupportFragmentManager().beginTransaction().replace(R.id.main_frame, new MyFragement()).commit();
+                getSupportFragmentManager().beginTransaction().setCustomAnimations(R.animator.enter_anim2,R.animator.exit_anim).replace(R.id.main_frame, new MyFragement()).commit();
 
                 break;
             case R.id.menu2:
-                getSupportFragmentManager().beginTransaction().replace(R.id.main_frame, new MyFragement2()).commit();
+                getSupportFragmentManager().beginTransaction().setCustomAnimations(R.animator.enter_anim2,R.animator.exit_anim).replace(R.id.main_frame, new MyFragement2()).commit();
                 break;
             case R.id.menu3:
-                getSupportFragmentManager().beginTransaction().replace(R.id.main_frame, new MyFragement3()).commit();
+                getSupportFragmentManager().beginTransaction().setCustomAnimations(R.animator.enter_anim,R.animator.exit_anim).replace(R.id.main_frame, new MyFragement3()).commit();
                 break;
             case R.id.menu4:
-                getSupportFragmentManager().beginTransaction().replace(R.id.main_frame, new MyFragement4()).commit();
+                getSupportFragmentManager().beginTransaction().setCustomAnimations(R.animator.enter_anim,R.animator.exit_anim).replace(R.id.main_frame, new MyFragement4()).commit();
                 break;
         }
 
